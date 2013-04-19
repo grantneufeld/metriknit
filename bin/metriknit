@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require File.expand_path('../../lib/metriknit/cli',  __FILE__)
+
+Metriknit::Cli.new.run(ARGV)
+

@@ -1,0 +1,21 @@
+body{background:#EEE; color:black;}
+h2, h3{margin:0em;}
+table{border-spacing:0em;}
+
+.file{background:white; color:black; border-radius:0.5em; box-shadow:inset 0px 0px 4px rgba(0,0,0,0.5);
+  padding:0.5em 1em;
+}
+.file + .file{margin-top:1em;}
+.file > table > tbody > tr.warning{vertical-align:top;}
+.file > table > tbody > tr.warning:nth-child(odd){background:rgba(0,0,0,0.05);}
+.file > table > tbody > tr.warning > td:first-child{text-align:right; min-width:3em;}
+.file > table > tbody > tr.warning > td:first-child + td{font-weight:bold; text-align:center; min-width:10em;}
+.file > table > tbody > tr.warning > td{padding:0.1em 0.5em;}
+.file > table > tbody > tr.warning > td + td{border-left:thin solid white;}
+
+.warning .meta{font-size:80%;}
+.warning .meta .item{border:thin solid rgba(0,0,0,0.1); white-space:nowrap; margin-left:1em;}
+.warning .meta .item .label{font-weight:bold;}
+.warning .meta .item .separator{display:inline;}
+
+.separator{display:none;}

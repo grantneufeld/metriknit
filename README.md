@@ -2,24 +2,31 @@
 
 Merge (“knit” together) the results of various code analysis (metrics) tools.
 
-[Source code repository](https://github.com/grantneufeld/metriknit)
+[Github source code repository](https://github.com/grantneufeld/metriknit)
 
 ## Requirements
 
 * ruby >= 1.9
+* bundler
 * git
 
 ## Installation
 
-In your gemfile, add:
+In your project `gemfile`, add:
 
 ```ruby
-gem 'metriknit', git: 'https://github.com/grantneufeld/metriknit.git', require: false
+group :development do
+  gem 'metriknit', git: 'https://github.com/grantneufeld/metriknit.git', require: false
+end
 ```
+
+Then, from the root directory for your project:
+
+    bundle install
 
 ### Gem Setup
 
-Metriknit will run based on the code analysis rubygems you have installed.
+Metriknit uses the following rubygems to perform various code analysis.
 
 Metriknit supports:
 * [brakeman](http://brakemanscanner.org/): Rails security analysis.
@@ -31,15 +38,16 @@ Metriknit supports:
 * [roodi](https://github.com/martinjandrews/roodi): Code smells.
 * [tailor](https://github.com/turboladen/tailor): Code style.
 
-Future support planned for:
+Future support might hopefully include:
 * [flay](https://github.com/seattlerb/flay): Code duplication.
+* rspec profile: Per-test profiling for speed.
 * simplecov: Test coverage.
 
 ## Usage
 
 From the root directory of your ruby project:
 
-    metriknit
+    bundle exec metriknit
 
 ## Contributors
 

@@ -1,3 +1,3 @@
 module Metriknit
-  VERSION = "0.0.1.alpha" unless defined?(Metriknit::VERSION)
+  VERSION = "0.0.1" unless defined?(Metriknit::VERSION)
 end

@@ -2,7 +2,7 @@
 
 Merge (“knit” together) the results of various code analysis (metrics) tools.
 
-[Github source code repository](https://github.com/grantneufeld/metriknit)
+[Metriknit source code repository on Github](https://github.com/grantneufeld/metriknit).
 
 ## Requirements
 
@@ -47,7 +47,21 @@ Future support might hopefully include:
 
 From the root directory of your ruby project:
 
-    bundle exec metriknit
+    bundle exec metriknit --help
+
+That’ll show the current instructions with command-line options.
+
+Example:
+
+    bundle exec metriknit --progress --git-only --format html --open --no-tailor tmp/metriknit.html
+
+That would:
+* display some progress messages in the console as the processing is done,
+* restrict the report to only files that git recognizes as having uncomitted changes,
+* format the output as html,
+* open the resulting file when finished,
+* skip the tests from the Tailor gem,
+* save the output in the file `tmp/metriknit.html`.
 
 ## Contributors
 
